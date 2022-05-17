@@ -33,8 +33,10 @@ export class SignupComponent implements OnInit {
       password: ['', Validators.required],
     });
   }
+  get f() { return this.signupForm.controls; }
 
   signup():void {
+    console.log(this.signupForm.value);
     this.signupRequestPayload.email = this.signupForm.value.email;
     // this.signupRequestPayload.username = this.signupForm.get('username').value;
     this.signupRequestPayload.username = this.signupForm.value.username;
