@@ -1,20 +1,16 @@
 header{
   border-radius: 1px solid;
 }
-.reddit-icon-svg{
-  height: 50px;
-  padding: 8px 8px 8px 0;
-  width: 50px;
+nav{
+  width: 100%;
 }
 
-.reddit-text{
+.forum-text{
   font-weight: 700;
   height: 50px;
   width: 50px;
 }
-.logo{
-  text-decoration: none;
-}
+
 
 .login, .sign-up{
   background-color: transparent;
