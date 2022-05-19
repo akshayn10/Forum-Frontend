@@ -14,6 +14,14 @@ import { HomeComponent } from './home/home.component';
 import { CreatePostComponent } from './post/create-post/create-post.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PostTileComponent } from './shared/post-tile/post-tile.component';
+import { VoteButtonComponent } from './shared/vote-button/vote-button.component';
+import { SideBarComponent } from './shared/side-bar/side-bar.component';
+import { CategorySideBarComponent } from './shared/category-side-bar/category-side-bar.component';
+import { ViewPostComponent } from './post/view-post/view-post.component';
+import { CreateCategoryComponent } from './category/create-category/create-category.component';
+import { ListCategoryComponent } from './category/list-category/list-category.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 @NgModule({
@@ -22,6 +30,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     HomeComponent,
     CreatePostComponent,
+    PostTileComponent,
+    VoteButtonComponent,
+    SideBarComponent,
+    CategorySideBarComponent,
+    ViewPostComponent,
+    CreateCategoryComponent,
+    ListCategoryComponent,
+    UserProfileComponent,
 
 
   ],

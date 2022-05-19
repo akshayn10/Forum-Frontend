@@ -8,7 +8,6 @@ import { CreatePostPayload } from '../post/create-post/create-post.payload';
   providedIn: 'root'
 })
 export class PostService {
-
   constructor(private http: HttpClient) { }
 
   getAllPosts(): Observable<Array<PostModel>> {
