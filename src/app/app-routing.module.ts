@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'view-post/:id', component: ViewPostComponent },
   { path: 'user-profile/:name', component: UserProfileComponent, canActivate: [AuthGuard] },
-  { path: 'list-categories', component: ListCategoryComponent },
+  { path: 'view-categories', component: ListCategoryComponent },
   { path: 'create-post', component: CreatePostComponent, canActivate: [AuthGuard] },
   { path: 'create-category', component: CreateCategoryComponent, canActivate: [AuthGuard] },
 

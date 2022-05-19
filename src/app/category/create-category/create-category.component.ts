@@ -34,7 +34,7 @@ export class CreateCategoryComponent implements OnInit {
     this.categoryModel.name = this.createcategoryForm.value.title;
     this.categoryModel.description = this.createcategoryForm.value.description;
     this.categoryService.createcategory(this.categoryModel).subscribe(data => {
-      this.router.navigateByUrl('/list-categorys');
+      this.router.navigateByUrl('/view-categories');
     }, error => {
       throwError(error);
     })

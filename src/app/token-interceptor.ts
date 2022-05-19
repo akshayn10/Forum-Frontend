@@ -13,7 +13,8 @@ export class TokenInterceptor implements HttpInterceptor {
     isTokenRefreshing = false;
     refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject(null);
 
-    constructor(public authService: AuthService) { }
+    constructor(public authService: AuthService) {
+     }
 
     intercept(req: HttpRequest<any>, next: HttpHandler):
         Observable<HttpEvent<any>> {

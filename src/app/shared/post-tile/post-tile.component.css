@@ -14,10 +14,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* width: 100%; */
 }
-.divCenter{
+/* .divCenter{
   margin-left: 400px;
-}
+} */
 
 .btnCommments{
   border-radius: 2px solid;

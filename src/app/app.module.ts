@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,6 +22,8 @@ import { ViewPostComponent } from './post/view-post/view-post.component';
 import { CreateCategoryComponent } from './category/create-category/create-category.component';
 import { ListCategoryComponent } from './category/list-category/list-category.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
+import { TokenInterceptor } from './token-interceptor';
 
 
 @NgModule({
@@ -49,9 +51,10 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     NgxWebstorageModule.forRoot(),
     ToastrModule.forRoot(),
     FontAwesomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    EditorModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:TokenInterceptor,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

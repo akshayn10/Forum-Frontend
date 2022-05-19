@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CommentPayload } from '../auth/comment/comment.payload';
-import { CommentService } from '../auth/comment/comment.service';
+import { CommentPayload } from '../comment/comment.payload';
+import { CommentService } from '../comment/comment.service';
 
 @Component({
   selector: 'app-user-profile',

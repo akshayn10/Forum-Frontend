@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit,AfterViewInit } from '@angular/core';
 import { PostModel } from '../post-model';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { VoteType } from './vote-type';
@@ -15,7 +15,7 @@ import { VotePayload } from './vote-payload';
   templateUrl: './vote-button.component.html',
   styleUrls: ['./vote-button.component.css']
 })
-export class VoteButtonComponent implements OnInit {
+export class VoteButtonComponent implements AfterViewInit {
   @Input() post!:PostModel
   votePayload!: VotePayload;
   faArrowUp = faArrowUp;
@@ -35,7 +35,7 @@ export class VoteButtonComponent implements OnInit {
     this.authService.loggedIn.subscribe((data: boolean) => this.isLoggedIn = data);
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.updateVoteDetails();
   }
 

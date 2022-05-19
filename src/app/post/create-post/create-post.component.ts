@@ -16,7 +16,7 @@ import { CreatePostPayload } from './create-post.payload';
 export class CreatePostComponent implements OnInit {
 
   createPostForm!: FormGroup;
-  postPayload: CreatePostPayload;
+  postPayload!: CreatePostPayload;
   categories!: Array<CategoryModel>;
 
   constructor(private router: Router, private postService: PostService,private fb :FormBuilder,
@@ -44,6 +44,7 @@ export class CreatePostComponent implements OnInit {
   }
 
   createPost() {
+    console.log(this.createPostForm.value);
     this.postPayload.postName = this.createPostForm.value.postName;
     this.postPayload.categoryName = this.createPostForm.value.categoryName;
     this.postPayload.url = this.createPostForm.value.url;

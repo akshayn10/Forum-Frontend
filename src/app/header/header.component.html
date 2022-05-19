@@ -24,13 +24,12 @@
     </div>
   </nav> -->
   <nav class="navbar fixed-top navbar-light bg-light justify-content-between">
-    <a class="navbar-brand">
+    <a class="navbar-brand" routerLink="/">
       <img height="50px" width="50px" src="../../assets/logo.jpg" alt="Logo" />
       <span class="forum-text"> Forum Falcon </span>
     </a>
     <div class="form-inline">
-      <div *ngIf="isLoggedIn" ngbDropdown class="float-right">
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <div *ngIf="isLoggedIn" >
           <button
             class="btn btn-outline-success"
             (click)="goToUserProfile()"
@@ -45,7 +44,7 @@
           >
             Logout
           </button>
-        </div>
+
         <button class="userdetails" id="dropdownBasic1" ngbDropdownToggle>
           <img class="account-icon" src="../../assets/profile.png" />
           {{ username }}
