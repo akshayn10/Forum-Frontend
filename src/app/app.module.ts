@@ -10,12 +10,18 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { CreatePostComponent } from './post/create-post/create-post.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    HomeComponent,
+    CreatePostComponent,
 
 
   ],
@@ -25,7 +31,9 @@ import { HeaderComponent } from './header/header.component';
     ReactiveFormsModule,
     HttpClientModule,AuthModule,
     NgxWebstorageModule.forRoot(),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,7 +29,7 @@
       <span class="forum-text"> Forum Falcon </span>
     </a>
     <div class="form-inline">
-      <div *ngIf="!isLoggedIn" ngbDropdown class="float-right">
+      <div *ngIf="isLoggedIn" ngbDropdown class="float-right">
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
           <button
             class="btn btn-outline-success"
@@ -51,7 +51,7 @@
           {{ username }}
         </button>
       </div>
-      <div *ngIf="isLoggedIn">
+      <div *ngIf="!isLoggedIn">
         <a routerLink="/sign-up" class="float-right sign-up mr-2">Sign up</a>
         <a routerLink="/login" class="float-right login mr-2">Login</a>
       </div>
