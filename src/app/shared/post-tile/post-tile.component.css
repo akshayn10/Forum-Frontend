@@ -16,9 +16,11 @@
   align-items: center;
   /* width: 100%; */
 }
-/* .divCenter{
-  margin-left: 400px;
-} */
+.divCenter{
+  border: black solid 1px;
+  margin: 20px;
+
+}
 
 .btnCommments{
   border-radius: 2px solid;

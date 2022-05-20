@@ -15,7 +15,7 @@ import { PostService } from 'src/app/shared/post.service';
 export class ViewPostComponent implements OnInit {
 
   postId: number;
-  post!: PostModel;
+  post!: PostModel
   commentForm!: FormGroup;
   commentPayload!: CommentPayload;
   comments!: CommentPayload[];
