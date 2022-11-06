@@ -24,6 +24,7 @@ import { ListCategoryComponent } from './category/list-category/list-category.co
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { TokenInterceptor } from './token-interceptor';
+import { CategoryPostComponent } from './post/category-post/category-post.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { TokenInterceptor } from './token-interceptor';
     CreateCategoryComponent,
     ListCategoryComponent,
     UserProfileComponent,
+    CategoryPostComponent,
 
 
   ],

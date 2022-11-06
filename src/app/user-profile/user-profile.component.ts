@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommentPayload } from '../comment/comment.payload';
 import { CommentService } from '../comment/comment.service';
 import { PostModel } from '../shared/post-model';
 import { PostService } from '../shared/post.service';
+import { faArrowUp,faArrowDown,faComments } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-user-profile',
@@ -17,9 +19,13 @@ export class UserProfileComponent implements OnInit {
   posts!: PostModel[];
   postLength!: number;
   commentLength!: number;
+  faArrowUp=faArrowUp;
+  faArrowDown=faArrowDown;
+  faComments=faComments;
+
 
   constructor(private activatedRoute: ActivatedRoute,
-    private commentService: CommentService,private postService:PostService) {
+    private commentService: CommentService,private postService:PostService,private router:Router) {
     this.name = this.activatedRoute.snapshot.params['name'];
 
     this.postService.getAllPostsByUser(this.name).subscribe(data => {
@@ -31,7 +37,12 @@ export class UserProfileComponent implements OnInit {
       this.comments = data;
       this.commentLength = data.length;
     });
+
   }
+  goToPost(id: number): void {
+    this.router.navigateByUrl('/view-post/' + id);
+  }
+
 
   ngOnInit(): void {}
   }

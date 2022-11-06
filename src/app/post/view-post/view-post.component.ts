@@ -41,8 +41,8 @@ export class ViewPostComponent implements OnInit {
   postComment() {
     this.commentPayload.text = this.commentForm.value.text;
     this.commentService.postComment(this.commentPayload).subscribe(data => {
-      this.commentForm.value.setValue('');
-      this.getCommentsForPost();
+      this.commentForm.value.text = '';
+      this.ngOnInit();
     }, error => {
       throwError(error);
     })

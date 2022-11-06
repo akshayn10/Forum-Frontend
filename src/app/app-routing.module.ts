@@ -6,6 +6,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { CreateCategoryComponent } from './category/create-category/create-category.component';
 import { ListCategoryComponent } from './category/list-category/list-category.component';
 import { HomeComponent } from './home/home.component';
+import { CategoryPostComponent } from './post/category-post/category-post.component';
 import { CreatePostComponent } from './post/create-post/create-post.component';
 import { ViewPostComponent } from './post/view-post/view-post.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'view-post/:id', component: ViewPostComponent },
   { path: 'user-profile/:name', component: UserProfileComponent, canActivate: [AuthGuard] },
   { path: 'view-categories', component: ListCategoryComponent },
+  { path: 'view-category/:categoryId', component: CategoryPostComponent },
   { path: 'create-post', component: CreatePostComponent, canActivate: [AuthGuard] },
   { path: 'create-category', component: CreateCategoryComponent, canActivate: [AuthGuard] },
 
