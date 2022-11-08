@@ -23,7 +23,6 @@ export class CreatePostComponent implements OnInit {
     private categoryService:CategoryService) {
     this.postPayload = {
       postName: '',
-      url: '',
       description: '',
       categoryName: ''
     }
@@ -47,7 +46,6 @@ export class CreatePostComponent implements OnInit {
     console.log(this.createPostForm.value);
     this.postPayload.postName = this.createPostForm.value.postName;
     this.postPayload.categoryName = this.createPostForm.value.categoryName;
-    this.postPayload.url = this.createPostForm.value.url;
     this.postPayload.description = this.createPostForm.value.description;
 
     this.postService.createPost(this.postPayload).subscribe((data) => {

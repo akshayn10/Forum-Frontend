@@ -19,6 +19,7 @@ export class PostTileComponent implements OnInit {
 
   constructor(private postService: PostService, private router: Router) {
     this.postService.getAllPosts().subscribe(post => {
+      console.log(post);
       this.posts$ = post;
     });
   }
